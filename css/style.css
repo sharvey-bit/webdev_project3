@@ -238,3 +238,32 @@ iframe {
     height: auto;
   }
 }
+
+/* Phone Layout */
+@media (max-width: 480px) {
+  header {
+    padding: 20px 10px;
+    font-size: 1.1rem;
+  }
+
+  #page-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-content {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  .media-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image1, .image2, video {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+}
