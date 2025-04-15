@@ -209,3 +209,32 @@ iframe {
   background-color: var(--secondary-color);
   cursor: pointer;
 }
+
+/* Tablet Layout */
+@media (min-width: 600px) {
+  header {
+    padding: 40px;
+    font-size: 1.3rem;
+  }
+
+  #page-nav ul {
+    gap: 30px;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .main-content {
+    padding: 40px;
+    font-size: 1.05rem;
+  }
+
+  .media-container {
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .image1, .image2, video {
+    width: 300px;
+    height: auto;
+  }
+}
