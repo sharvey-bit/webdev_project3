@@ -1,0 +1,211 @@
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #2b6777;
+  --secondary-color: #c8d8e4;
+  --accent-color: #52ab98;
+  --text-color: #2f4858;
+  --background-color: #f2f2f2;
+}
+
+/* Basic page layout */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  color: white;
+}
+
+/* Update navigation styles */
+#page-nav {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#page-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+#page-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+#page-nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding: 12px 24px;
+  display: block;
+  transition: background-color 0.3s ease;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#page-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+#page-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+#page-nav a:hover {
+  background-color: #2c3e50;
+}
+
+/* Main content styles */
+.main-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+/* List styles */
+ul {
+  list-style-position: inside;
+  margin-bottom: 15px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Add this new section for media container */
+.media-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+/* Update image styles */
+.image1, .image2 {
+  width: 272px;
+  height: 363px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* Remove the conflicting styles */
+.image1, .image2, iframe {
+  transition: transform 0.3s ease;
+}
+
+/* Keep hover effect */
+.image1:hover, .image2:hover {
+  transform: scale(1.02);
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+td, th {
+  padding: 8px;
+}
+
+/* Update iframe styles */
+iframe {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Shared hover effects */
+.image1, .image2, iframe {
+  transition: transform 0.3s ease;
+}
+
+.image1:hover, .image2:hover, iframe:hover {
+  transform: scale(1.02);
+}
+
+/* Update media container styles to include video */
+.media-container img,
+.media-container video{
+  width: 272px;
+  height: 363px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  object-fit: cover;
+  margin: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Add hover effects for all media */
+.media-container img:hover,
+.media-container video:hover,
+.media-container iframe:hover {
+  transform: scale(1.02);
+}
+
+/* Add specific video controls styling */
+.media-container video {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
