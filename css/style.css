@@ -267,3 +267,38 @@ iframe {
     height: auto;
   }
 }
+
+/* Photo Slider */
+.slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#slider-image {
+  width: 272px;
+  height: 363px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.slider-btn {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+  background-color: var(--accent-color);
+}
+

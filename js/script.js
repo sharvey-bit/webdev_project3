@@ -33,4 +33,24 @@ function initMap() {
       infowindow.open(map, marker);
     });
   }
-  
+
+document.addEventListener("DOMContentLoaded", () => {
+    const images = [
+        "images/hana1.jpg",
+        "images/poppy1.jpg",
+        "images/momo3.jpg"
+    ];
+
+    let currentIndex = 0;
+    const imgElement = document.getElementById("slider-image");
+
+    document.getElementById("prevBtn").addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        imgElement.src = images[currentIndex];
+    });
+
+    document.getElementById("nextBtn").addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        imgElement.src = images[currentIndex];
+    });
+});
