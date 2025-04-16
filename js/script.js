@@ -98,3 +98,27 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentSlide); // Initialize
   });
   
+document.addEventListener("DOMContentLoaded", () => {
+    const hikeSlides = document.querySelectorAll(".slide-container .slide");
+    const prevHike = document.getElementById("prevHike");
+    const nextHike = document.getElementById("nextHike");
+    let currentHikeIndex = 0;
+
+    function showHike(index) {
+        hikeSlides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+        });
+    }
+
+    prevHike?.addEventListener("click", () => {
+        currentHikeIndex = (currentHikeIndex - 1 + hikeSlides.length) % hikeSlides.length;
+        showHike(currentHikeIndex);
+    });
+
+    nextHike?.addEventListener("click", () => {
+        currentHikeIndex = (currentHikeIndex + 1) % hikeSlides.length;
+        showHike(currentHikeIndex);
+    });
+
+    showHike(currentHikeIndex);
+});
