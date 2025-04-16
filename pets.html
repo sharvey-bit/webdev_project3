@@ -29,50 +29,43 @@
         </section>
         <section>
           <h2>My Pets</h2>
-          <p>Currently my family owns two dogs, Hana and Poppy, but sadly one has recently passed away, Barley. At home I live with my cat Momo who sadly has never met my family.</p>
-        </section>
-        <section>
-          <h3>Hana</h3>
-          <div class="media-container">
-            <img class="image1" src="images/hana1.jpg" alt="Golden Retriever resting head on bed">
-          </div>
-          <ul>
-            <li>Hana is a Golden Retriever and my family's fourth dog. I basically raised her since she was a puppy when my family was too busy to take care of her.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Poppy</h3>
-          <div class="media-container">
-            <img class="image1" src="images/poppy1.jpg" alt="Small black and white dog laying on couch">
-          </div>
-          <ul>
-            <li>Poppy is a Chihuahua Beagle mix and she was our third dog. She's the most spoiled because she's the smallest and can therefore lay on your lap without crushing you.</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Momo</h3>
-          <div class="media-container">
-            <img class="image1" src="images/momo3.jpg" alt="Orange cat streatching paws out touching a hand">
-            <video controls preload="metadata">
-              <source src="videos/momo_biscuit.mp4" type="video/mp4">
-            </video>
-          </div>
-          <ul>
-            <li>Momo is my pet that I rescued from a pet adoption center and has sadly only ever been in Chicago. She's by far my favorite pet and is still warming up to me.</li>
-          </ul>
-        </section>
-        <section>
-          <h2>Pet Photo Slider</h2>
-          <div class="slider-container">
-            <button class="slider-btn" id="prevBtn">&#10094;</button>
-            <img id="slider-image" src="images/hana1.jpg" alt="Main pet image">
-            <button class="slider-btn" id="nextBtn">&#10095;</button>
-          </div>
+          <div class="slide-container">
+            <button class="slider-btn" id="prevSlide">&#10094;</button>
         
-          <div class="thumbnail-container">
-            <img class="thumbnail" src="images/hana1.jpg" alt="Hana thumbnail" data-index="0">
-            <img class="thumbnail" src="images/poppy1.jpg" alt="Poppy thumbnail" data-index="1">
-            <img class="thumbnail" src="images/momo3.jpg" alt="Momo thumbnail" data-index="2">
+            <div class="slide active">
+              <h3>Hana</h3>
+              <div class="media-container">
+                <img class="image1" src="images/hana1.jpg" alt="Golden Retriever resting head on bed">
+              </div>
+              <ul>
+                <li>Hana is a Golden Retriever and my family's fourth dog. I basically raised her since she was a puppy when my family was too busy to take care of her.</li>
+              </ul>
+            </div>
+        
+            <div class="slide">
+              <h3>Poppy</h3>
+              <div class="media-container">
+                <img class="image1" src="images/poppy1.jpg" alt="Small black and white dog laying on couch">
+              </div>
+              <ul>
+                <li>Poppy is a Chihuahua Beagle mix and she was our third dog. She's the most spoiled because she's the smallest and can therefore lay on your lap without crushing you.</li>
+              </ul>
+            </div>
+        
+            <div class="slide">
+              <h3>Momo</h3>
+              <div class="media-container">
+                <img class="image1" src="images/momo3.jpg" alt="Orange cat stretching paws out touching a hand">
+                <video controls preload="metadata">
+                  <source src="videos/momo_biscuit.mp4" type="video/mp4">
+                </video>
+              </div>
+              <ul>
+                <li>Momo is my pet that I rescued from a pet adoption center and has sadly only ever been in Chicago. She's by far my favorite pet and is still warming up to me.</li>
+              </ul>
+            </div>
+        
+            <button class="slider-btn" id="nextSlide">&#10095;</button>
           </div>
         </section>        
       </div>
