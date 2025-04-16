@@ -42,15 +42,33 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     let currentIndex = 0;
-    const imgElement = document.getElementById("slider-image");
+    const mainImg = document.getElementById("slider-image");
+    const thumbnails = document.querySelectorAll(".thumbnail");
+
+    function updateMainImage(index) {
+        currentIndex = index;
+        mainImg.src = images[currentIndex];
+
+        thumbnails.forEach((thumb, i) => {
+        thumb.classList.toggle("active", i === index);
+        });
+    }
 
     document.getElementById("prevBtn").addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        imgElement.src = images[currentIndex];
+        const newIndex = (currentIndex - 1 + images.length) % images.length;
+        updateMainImage(newIndex);
     });
 
     document.getElementById("nextBtn").addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        imgElement.src = images[currentIndex];
+        const newIndex = (currentIndex + 1) % images.length;
+        updateMainImage(newIndex);
     });
+
+    thumbnails.forEach((thumb, i) => {
+        thumb.addEventListener("click", () => {
+        updateMainImage(i);
+        });
+    });
+
+    updateMainImage(0); // set initial active state
 });
